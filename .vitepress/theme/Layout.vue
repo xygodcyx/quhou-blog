@@ -7,7 +7,7 @@
     </div>
     <Home v-else-if="frontmatter.index" />
     <Archives v-else-if="frontmatter.archives" />
-    <Content v-else />
+    <ArticleDetail v-else />
   </div>
 </template>
 
@@ -17,18 +17,13 @@ import { Content, useData } from 'vitepress'
 import Home from './Components/Home.vue';
 import Archives from './Components/Archives.vue';
 import TopNav from './Components/TopNav.vue';
+import ArticleDetail from './Components/Article/ArticleDetail.vue';
+
 
 const { frontmatter, page } = useData()
 </script>
 
 
 <style>
-@font-face {
-  font-family: 'ruimei';
-  src: url('../../assets/subset/ruimei.woff2') format('woff2');
-}
-
-html * {
-  font-family: 'ruimei', sans-serif;
-}
+  @import url(./style.css);
 </style>

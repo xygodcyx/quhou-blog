@@ -11,7 +11,6 @@ import { useAttrs } from 'vue';
 const router = useRouter();
 const href: string = useAttrs().href as string;
 
-console.log(router.route.path, href);
 </script>
 
 <style lang="scss">

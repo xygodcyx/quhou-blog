@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'ruimei';
+  src: url('../../assets/subset/ruimei.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'ruimei-dev';
+  src: url('../../assets/ruimei.ttf');
+}
+
+html * {
+  font-family: 'ruimei', 'ruimei-dev', sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p{
+  text-indent: 2rem;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    h5 {
+      font-size: 0.875rem;
+    }
+
+    h6 {
+      font-size: 0.75rem;
+    }
+
+    p{
+      text-indent: 1rem;
+    }
+}

@@ -1,7 +1,8 @@
 <template>
   <div>
     <nav class="w-full h10 p2 flex items-center">
-      <a href="/">
+      <a href="/"
+        class="text-4xl font-bold overflow-hidden">
         QuHou's Blog
       </a>
       <div class="flex-auto" />
@@ -17,7 +18,7 @@
         <TextIcon target="_blank"
           title="xygodcyx"
           href="https://github.com/xygodcyx">Github</TextIcon>
-          <TextIcon target="_blank"
+        <TextIcon target="_blank"
           title="force76246"
           href="https://x.com/force76246">X</TextIcon>
       </div>
@@ -54,9 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vitepress';
 
-const router = useRouter();
 </script>
 
 <style lang="scss" scoped></style>
