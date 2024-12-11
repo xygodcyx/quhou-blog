@@ -2,16 +2,25 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "quhou's blog",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
   "dependencies": {
+    "unocss": "^0.65.1",
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
+    "@iconify/json": "^2.2.281",
+    "@types/node": "^22.10.2",
+    "@unocss/reset": "^0.65.1",
+    "sass-embedded": "^1.82.0",
     "vitepress": "^1.5.0"
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
   }
 }
