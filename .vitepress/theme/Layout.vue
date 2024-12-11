@@ -25,7 +25,7 @@ const { frontmatter, page } = useData()
 <style>
 @font-face {
   font-family: 'ruimei';
-  src: url('../../assets/ruimei.ttf');
+  src: url('../../assets/ruimei.woff2') format('woff2');
 }
 
 html * {
