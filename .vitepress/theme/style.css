@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'ruimei';
-  src: url('./ruimei.ttf');
-}
-html * {
-  font-family: 'ruimei', sans-serif;
-}

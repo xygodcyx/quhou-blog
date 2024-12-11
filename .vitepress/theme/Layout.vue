@@ -20,3 +20,15 @@ import TopNav from './Components/TopNav.vue';
 
 const { frontmatter, page } = useData()
 </script>
+
+
+<style>
+@font-face {
+  font-family: 'ruimei';
+  src: url('../../assets/ruimei.ttf');
+}
+
+html * {
+  font-family: 'ruimei', sans-serif;
+}
+</style>
