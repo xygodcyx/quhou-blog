@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build && node scripts/createSubsetWoff2.cjs",
     "preview": "vitepress preview"
   },
   "dependencies": {
@@ -17,7 +17,11 @@
     "@iconify/json": "^2.2.281",
     "@types/node": "^22.10.2",
     "@unocss/reset": "^0.65.1",
+    "fonteditor-core": "^2.4.1",
+    "fontmin": "^2.0.0",
+    "glob": "^11.0.0",
     "sass-embedded": "^1.82.0",
+    "ttf2woff2": "^6.0.1",
     "vitepress": "^1.5.0"
   },
   "eslintConfig": {
