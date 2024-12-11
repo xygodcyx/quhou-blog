@@ -2,7 +2,7 @@
   <div>
     <nav class="w-full h10 p2 flex items-center">
       <a href="/"
-        class="text-4xl font-bold overflow-hidden">
+        class="text-2xl font-bold overflow-hidden xl:text-4xl">
         QuHou's Blog
       </a>
       <div class="flex-auto" />

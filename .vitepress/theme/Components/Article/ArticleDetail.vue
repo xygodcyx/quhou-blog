@@ -1,8 +1,8 @@
 <template>
   <div class="w-100vw flex flex-col items-center ">
-    <div class="w-80% flex flex-col items-center">
+    <div class="w-80% flex flex-col items-center xl:w-50%">
       <h1 class="text-center mb-4">{{ frontmatter.title }}</h1>
-      <div class="w-70% flex items-center gap-0.1 w-90%">
+      <div class="w-90% flex items-center gap-0.1 xl:w-90%">
         <div class="flex-auto"/>
         <span>由</span>
         <span class="">{{ frontmatter.author }}</span>
