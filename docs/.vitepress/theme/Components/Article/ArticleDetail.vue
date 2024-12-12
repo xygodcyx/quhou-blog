@@ -11,11 +11,12 @@
         <span class="ml-1">{{ new Date(frontmatter.date).getFullYear() + '年' + (new Date(frontmatter.date).getMonth() +
           1) + '月' + new Date(frontmatter.date).getDate() + '日' }}</span>
       </div>
-      <section class="excerpt w-full indent-4">
-        {{ excerpt }}
+      <section class="excerpt w-full">
+        <p class="text-sm font-italic indent-4">AI摘要：</p>
+        <p class="indent-4 font-italic">{{ aiExcerpt || frontmatter.excerpt || "暂无摘要" }}</p>
       </section>
-      <hr>
-      <Content class="w-full indent-4" />
+      <hr class="w-full my-2">
+      <Content class="w-full indent-4 text-xl" />
     </div>
   </div>
 </template>
@@ -23,29 +24,15 @@
 <script setup lang="ts">
 import { Content, useData } from 'vitepress'
 import { ref, onMounted } from 'vue'
+import { getSummary } from "../../utills"
 const content = ref<HTMLElement>()
 const { frontmatter, page, description, site } = useData()
-const excerpt = ref('暂未有摘要')
+// compouse
+const aiExcerpt = ref('')
 onMounted(function () {
   const articleContent = content.value?.innerText.replace(/\s+/g, '')
-  console.log(location)
   if (!articleContent) return
-  const params = new URLSearchParams()
-  params.set('content', articleContent)
-  params.set('key', 'WiLGSwUJ0b5')
-  params.set('url', location.href)
-  const headers = new Headers()
-  headers.set('Referer', location.origin)
-  headers.set('EO-Debug-Headers', 'all')
-  fetch(`https://summary.tianli0.top?${params.toString()}`, {
-    method: "GET",
-    headers
-  }).then(res => res.json()).then(data => {
-    excerpt.value = data.summary
-  }).catch(err => {
-    console.error(err)
-  })
-
+  getSummary({ content: articleContent, title: frontmatter.value.title }, aiExcerpt)
 })
 
 </script>

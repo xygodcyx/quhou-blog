@@ -8,13 +8,13 @@ defineProps<{
 </script>
 
 <template>
-  <div class="w-full  p-4 mb-4">
+  <div class="w-full p-2 mb-2">
     <a :href="post.url"
       class="w-full flex items-center justify-between">
-      <h2 class="text-lg font-bold xl:text-2xl">{{ post.title }}</h2>
+      <h1 :id="post.title"
+        class="text-lg font-bold md:text-2xl">{{ post.title }}</h1>
     </a>
-    <p v-html="post.excerpt"
-      class="indent-4"></p>
+    <p class="">{{ post.excerpt.slice(0, 200) + '...' }}</p>
     <div>
       <p class="w-full flex justify-end items-center gap-0">
         <span class="w-fit

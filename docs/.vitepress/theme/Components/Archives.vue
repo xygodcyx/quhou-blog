@@ -1,7 +1,5 @@
 <script setup>
 import { data as articles } from '../data/archive.data'
-import Article from './Article/Article.vue';
-console.log(articles)
 </script>
 
 <template>

@@ -19,7 +19,6 @@ import Archives from './Components/Archives.vue';
 import TopNav from './Components/TopNav.vue';
 import ArticleDetail from './Components/Article/ArticleDetail.vue';
 
-
 const { frontmatter, page } = useData()
 </script>
 

@@ -29,7 +29,7 @@ export default createContentLoader('posts/*/*.md', {
     for (const year of years) {
       result.push({
         year,
-        posts: yearMap[year].map(post => {
+        posts: yearMap[year].sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()).map(post => {
           const date = new Date(post.frontmatter.date)
           const dateText = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
           return {

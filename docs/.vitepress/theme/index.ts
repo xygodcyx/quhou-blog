@@ -2,7 +2,8 @@
 
 import '@unocss/reset/tailwind.css'
 import { h } from 'vue'
-import type { Theme } from 'vitepress'
+import { type Theme } from 'vitepress'
+import { createMarkdownRenderer } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import Layout from './Layout.vue'
 import "uno.css";
@@ -10,6 +11,8 @@ import "uno.css";
 // Custom components
 import TextIcon from './Components/Icon/TextIcon.vue'
 import LinkText from './Components/Link/LinkText.vue'
+
+
 export default {
   ...DefaultTheme,
   Layout: () => {
@@ -21,5 +24,5 @@ export default {
     app.component('TextIcon', TextIcon)
     app.component('LinkText', LinkText)
     // ...
-  }
+  },
 } satisfies Theme

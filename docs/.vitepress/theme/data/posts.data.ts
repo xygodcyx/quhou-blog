@@ -23,7 +23,6 @@ export default createContentLoader('posts/*/*.md', {
     }).map(item => {
       const date = new Date(item.frontmatter.date)
       const dateText = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
-      console.log(item.excerpt)
       return {
         url: item.url,
         title: item.frontmatter.title,
@@ -31,8 +30,12 @@ export default createContentLoader('posts/*/*.md', {
         date: dateText,
         dateTime: date.getTime(),
         tags: item.frontmatter.tags,
-        excerpt: item.excerpt,
+        excerpt: item.excerpt || item.frontmatter.excerpt,
       }
     })
   }
 })
+
+function exractSummary(rawData) {
+
+}
