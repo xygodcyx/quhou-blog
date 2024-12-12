@@ -12,7 +12,6 @@ import "uno.css";
 import TextIcon from './Components/Icon/TextIcon.vue'
 import LinkText from './Components/Link/LinkText.vue'
 
-
 export default {
   ...DefaultTheme,
   Layout: () => {

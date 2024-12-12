@@ -12,6 +12,9 @@ export default defineConfig({
     plugins: [
       UnoCSS()
     ],
+    define: {
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true
+    },
     server: {
       // https: process.env.NODE_ENV === 'development' ? {
       //   key: path.resolve(__dirname, "../../", 'localhost.key'),
