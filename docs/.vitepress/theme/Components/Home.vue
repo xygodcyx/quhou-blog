@@ -1,11 +1,11 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { data as posts } from '../data/posts.data'
 import Article from './Article/Article.vue';
 
-const hash = ref(window.location.hash.slice(1));
+const hash = ref(window?.location.hash.slice(1) || null);
 onMounted(() => {
-  window.addEventListener('hashchange', () => {
+  window?.addEventListener('hashchange', () => {
     hash.value = window.location.hash.slice(1);
   });
 });
