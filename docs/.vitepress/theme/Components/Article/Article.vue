@@ -12,7 +12,7 @@ defineProps<{
     <a :href="post.url"
       class="w-full flex items-center justify-between">
       <h1 :id="post.title"
-        class="text-lg font-bold md:text-2xl">{{ post.title }}</h1>
+        class="text-2xl font-bold md:text-4xl">{{ post.title }}</h1>
     </a>
     <p class="">{{ post.excerpt.slice(0, 200) + '...' }}</p>
     <div>
