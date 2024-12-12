@@ -9,10 +9,7 @@ export default defineConfig({
   vite: {
     plugins: [
       UnoCSS()
-    ],
-    build: {
-      minify: "esbuild",
-    }
+    ]
   },
   themeConfig: {
     lastUpdated: {

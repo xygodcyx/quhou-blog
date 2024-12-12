@@ -22,7 +22,7 @@
           title="force76246"
           href="https://x.com/force76246">X</TextIcon>
       </div>
-      <div class="icons flex gap-1 items-center"
+      <!-- <div class="icons flex gap-1 items-center"
         v-if="false">
         <a target="_blank"
           title="Bilibili"
@@ -49,7 +49,7 @@
           href="javascript:void(0)">
           <div class="i-tabler:rss"></div>
         </a>
-      </div>
+      </div> -->
     </nav>
   </div>
 </template>

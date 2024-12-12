@@ -8,8 +8,9 @@ console.log(posts)
   <div class="w-100vw flex-col items-center">
     <h1 class="text-center mb-4">所有文章</h1>
     <ul class="list-none flex-col items-center w-full">
-      <Article v-for="post of posts"
-        :post="post" />
+      <li v-for="post of posts" class="text-center mb-4 w-full">
+        <Article :post="post" />
+      </li>
     </ul>
   </div>
 </template>

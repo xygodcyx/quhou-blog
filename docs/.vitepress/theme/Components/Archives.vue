@@ -1,14 +1,16 @@
 <script setup>
 import { data as posts } from '../posts.data'
 import Article from './Article/Article.vue';
+console.log(posts)
 </script>
 
 <template>
   <div class="w-100vw flex-col items-center">
     <h1 class="text-center mb-4">归档</h1>
     <ul class="list-none flex-col items-center w-full">
-      <Article v-for="post of posts"
-        :post="post" />
+      <li v-for="post of posts" class="text-center mb-4 w-full">
+        <Article :post="post" />
+      </li>
     </ul>
   </div>
 </template>
