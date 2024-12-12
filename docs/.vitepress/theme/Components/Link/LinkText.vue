@@ -1,5 +1,5 @@
 <template>
-  <a class="text-4 text-gray-500 hover:text-gray-600"
+  <a class="text-6 text-gray-500 hover:text-gray-600"
     :class="{ active: router.route.path.split('.')[0] === (href) }">
     <slot />
   </a>
