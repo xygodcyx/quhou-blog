@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import UnoCSS from 'unocss/vite'
+import path from 'path'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -9,7 +10,13 @@ export default defineConfig({
   vite: {
     plugins: [
       UnoCSS()
-    ]
+    ],
+    server: {
+      https: process.env.NODE_ENV === 'development' ? {
+        key: path.resolve(__dirname, "../../", 'localhost.key'),
+        cert: path.resolve(__dirname, "../../", 'localhost.crt'),
+      } : {}
+    }
   },
   themeConfig: {
     lastUpdated: {

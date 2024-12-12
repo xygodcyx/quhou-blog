@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TypeArticle } from '../../posts.data';
+import { TypeArticle } from '../../data/posts.data';
 defineProps<{
   post: TypeArticle,
 }>()
@@ -8,13 +8,22 @@ defineProps<{
 </script>
 
 <template>
-  <a :href="post.url">
-    <span class="text-lg text-blue font-bold xl:text-xl">{{ post.title }}</span>
-    <span class="text-sm text-gray-500">by {{ post.author }}</span>
-    <span>-{{ new Date(post.date).toLocaleDateString() }}</span>
-    <span class="color-red font-bold ml-1 w-fit h2 b-1 b-solid b-gray line-height-2"
-      v-for="tag of post.tags">
-      {{ tag }}
-    </span>
-  </a>
+  <div class="w-full  p-4 mb-4">
+    <a :href="post.url"
+      class="w-full flex items-center justify-between">
+      <h2 class="text-lg font-bold xl:text-2xl">{{ post.title }}</h2>
+    </a>
+    <p v-html="post.excerpt"
+      class="indent-4"></p>
+    <div>
+      <p class="w-full flex justify-end items-center gap-0">
+        <span class="w-fit
+        color-gray-500/60 b-current
+        b-1 b-dotted "
+          v-for="tag of post.tags">
+          {{ tag }}
+        </span>
+      </p>
+    </div>
+  </div>
 </template>

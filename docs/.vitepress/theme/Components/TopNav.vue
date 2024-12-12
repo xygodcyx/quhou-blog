@@ -1,28 +1,27 @@
 <template>
-  <div>
-    <nav class="w-full h10 p2 flex items-center">
-      <a href="/"
-        class="text-2xl font-bold overflow-hidden xl:text-4xl">
-        QuHou's Blog
-      </a>
-      <div class="flex-auto" />
-      <div class="menu flex items-center gap-2">
-        <LinkText href="/">首页</LinkText>
-        <LinkText href="/archives">归档</LinkText>
-      </div>
-      <div class="mr-4" />
-      <div class="icons-text gap-1 w-fit flex">
-        <TextIcon target="_blank"
-          title="屈侯访翠思乡"
-          href="https://space.bilibili.com/1308065752">B站</TextIcon>
-        <TextIcon target="_blank"
-          title="xygodcyx"
-          href="https://github.com/xygodcyx">Github</TextIcon>
-        <TextIcon target="_blank"
-          title="force76246"
-          href="https://x.com/force76246">X</TextIcon>
-      </div>
-      <!-- <div class="icons flex gap-1 items-center"
+  <nav class="w-full h10 p2 flex items-center">
+    <a href="/"
+      class="text-sm font-bold overflow-hidden xl:text-xl">
+      QuHou's Blog
+    </a>
+    <div class="flex-auto" />
+    <div class="menu flex items-center gap-2">
+      <LinkText href="/">首页</LinkText>
+      <LinkText href="/archives">归档</LinkText>
+    </div>
+    <div class="mr-4" />
+    <div class="icons-text gap-1 w-fit flex">
+      <TextIcon target="_blank"
+        title="屈侯访翠思乡"
+        href="https://space.bilibili.com/1308065752">B站</TextIcon>
+      <TextIcon target="_blank"
+        title="xygodcyx"
+        href="https://github.com/xygodcyx">Github</TextIcon>
+      <TextIcon target="_blank"
+        title="force76246"
+        href="https://x.com/force76246">X</TextIcon>
+    </div>
+    <!-- <div class="icons flex gap-1 items-center"
         v-if="false">
         <a target="_blank"
           title="Bilibili"
@@ -50,8 +49,7 @@
           <div class="i-tabler:rss"></div>
         </a>
       </div> -->
-    </nav>
-  </div>
+  </nav>
 </template>
 
 <script setup lang="ts">

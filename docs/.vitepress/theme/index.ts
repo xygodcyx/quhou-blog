@@ -6,7 +6,6 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import Layout from './Layout.vue'
 import "uno.css";
-import "../../assets/style.css";
 
 // Custom components
 import TextIcon from './Components/Icon/TextIcon.vue'

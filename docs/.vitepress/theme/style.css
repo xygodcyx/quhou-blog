@@ -24,6 +24,10 @@ body{
   overflow-x: hidden;
 }
 
+hr{
+  margin: 10px 0;
+}
+
 h1 {
   font-size: 2.25rem;
 }
@@ -46,11 +50,6 @@ h5 {
 
 h6 {
   font-size: 1rem;
-}
-
-p{
-  text-indent: 2rem;
-  margin-top: 2px;
 }
 
 @media screen and (max-width: 768px) {
@@ -76,10 +75,5 @@ p{
 
     h6 {
       font-size: 0.75rem;
-    }
-
-    p{
-      text-indent: 1rem;
-      font-size: large;
     }
 }
