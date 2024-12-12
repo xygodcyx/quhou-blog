@@ -20,13 +20,13 @@ onMounted(() => {
         <Article :post="post" />
       </li>
     </ul>
-    <ul class="fixed right-10% top-10% mb-4 md:mb-0">
+    <!-- <ul class="fixed right-10% top-10% mb-4 md:mb-0">
       <li v-for="post of posts">
         <a :href="'#' + post.title"
           class="text-gray-500 hover:text-gray-900"
           :class="{ 'text-gray-900': hash === encodeURI(post.title) }">
           {{ post.title }}</a>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
