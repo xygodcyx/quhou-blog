@@ -4,9 +4,9 @@
   "description": "quhou's blog",
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build && node scripts/createSubsetWoff2.cjs",
-    "preview": "vitepress preview"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs && node scripts/createSubsetWoff2.cjs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "unocss": "^0.65.1",

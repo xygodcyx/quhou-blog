@@ -1,6 +1,7 @@
 <script setup>
 import { data as posts } from '../posts.data'
 import Article from './Article/Article.vue';
+console.log(posts)
 </script>
 
 <template>

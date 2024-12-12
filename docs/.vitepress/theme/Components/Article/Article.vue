@@ -4,6 +4,7 @@ defineProps<{
   post: TypeArticle,
 }>()
 
+
 </script>
 
 <template>

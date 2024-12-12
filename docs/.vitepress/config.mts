@@ -5,12 +5,17 @@ import UnoCSS from 'unocss/vite'
 export default defineConfig({
   title: "blog",
   description: "quhou's blog",
+  srcDir: "./",
   vite: {
     plugins: [
       UnoCSS()
     ]
   },
   themeConfig: {
-
+    lastUpdated: {
+      formatOptions: {
+        forceLocale: true
+      }
+    }
   }
 })
