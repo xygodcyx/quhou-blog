@@ -1,15 +1,15 @@
 // archive.data.ts
 import { createContentLoader } from 'vitepress'
 
-interface TypeArchiveData {
+interface Post {
   url: string
   title: string
   date: string
   dateTime: number
 }
-export interface TypeArchive {
+export interface Archive {
   year: string
-  posts: TypeArchiveData[]
+  posts: Post[]
 }
 
 export default createContentLoader('posts/*/*.md', {
@@ -25,7 +25,7 @@ export default createContentLoader('posts/*/*.md', {
 
     // 按年份排序
     const years = Object.keys(yearMap).sort((a, b) => +b - +a)
-    const result: TypeArchive[] = []
+    const result: Archive[] = []
     for (const year of years) {
       result.push({
         year,

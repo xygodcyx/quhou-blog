@@ -15,12 +15,9 @@ export default defineConfig({
       warn: true,
       unit: 'em',
     }),
-    presetWebFonts({
-      provider: 'bunny',
-      fonts: {
-        sans: 'Inter',
-      },
-    }),
+  ],
+  rules: [
+    ["text-overflow-ellipsis", { "text-overflow": "ellipsis", "white-space": "nowrap", "overflow": "hidden" }]
   ],
   transformers: [
     transformerDirectives(),

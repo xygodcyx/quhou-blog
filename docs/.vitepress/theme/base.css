@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'ruimei';
+  src: url('../../assets/subset/ruimei.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'ruimei-dev';
+  src: url('../../assets/ruimei.ttf');
+}
+
+html * {
+  font-family: 'ruimei', 'ruimei-dev', sans-serif;
+}
+pre * {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+}
+
+pre {
+  background-color: #ffe9d065;
+  padding: 0.8rem;
+  text-indent: 0;
+  margin: 10px 0;
+}
+pre code{
+  background-color: transparent;
+}
+details{
+  margin: 10px 0;
+}
+code {
+  background-color: #fcd9b165;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-indent: 0;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-indent: 0;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-indent: 0;
+}
+h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-indent: 0;
+}
+h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-indent: 0;
+}
+h6 {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-indent: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(247, 212, 71, 0.119);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to top,
+    rgba(247, 212, 71, 0.658),
+    rgba(247, 212, 71, 0.119)
+  );
+}

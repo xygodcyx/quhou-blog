@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { TypeArticle } from '../../data/posts.data';
+import { Post } from '../../data/posts.data';
 defineProps<{
-  post: TypeArticle,
+  post: Post,
 }>()
 
 
@@ -14,9 +14,9 @@ defineProps<{
       <h1 :id="post.title"
         class="text-2xl font-bold md:text-4xl">{{ post.title }}</h1>
     </a>
-    <p class="">{{ post.excerpt.slice(0, 200) + '...' }}</p>
+    <p class="">{{ post.excerpt ? post.excerpt.slice(0, 200) + '...' : '暂无摘要' }}</p>
     <div>
-      <p class="w-full flex justify-end items-center gap-0">
+      <p class="w-full flex justify-end items-center gap-1">
         <span class="w-fit
         color-gray-500/60 b-current
         b-1 b-dotted "

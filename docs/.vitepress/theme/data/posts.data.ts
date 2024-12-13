@@ -1,7 +1,7 @@
 // posts.data.ts
 import { createContentLoader } from 'vitepress'
 
-export interface TypeArticle {
+export interface Post {
   url: string
   title: string
   date: string
@@ -12,14 +12,11 @@ export interface TypeArticle {
 }
 
 export default createContentLoader('posts/*/*.md', {
-  excerpt: true,
-  render: false,
-  includeSrc: true,
   transform(rawData) {
     // 根据需要对原始数据进行 map、sort 或 filter
     // 最终的结果是将发送给客户端的内容
     return rawData.sort((a, b) => {
-      return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date) > 0 ? -1 : 1
+      return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date) // 按日期降序排序
     }).map(item => {
       const date = new Date(item.frontmatter.date)
       const dateText = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
@@ -30,7 +27,7 @@ export default createContentLoader('posts/*/*.md', {
         date: dateText,
         dateTime: date.getTime(),
         tags: item.frontmatter.tags,
-        excerpt: item.excerpt || item.frontmatter.excerpt,
+        excerpt:item.frontmatter.excerpt,
       }
     })
   }
