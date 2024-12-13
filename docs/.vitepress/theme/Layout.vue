@@ -2,7 +2,6 @@
 <template>
   <div class="w100vw min-h-100vh overflow-x-hidden bg-white">
     <TopNav />
-    <hr>
     <NotFound v-if="page.isNotFound" />
     <Home v-else-if="frontmatter.index" />
     <Archives v-else-if="frontmatter.archives" />

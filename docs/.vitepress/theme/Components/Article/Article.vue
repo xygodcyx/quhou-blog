@@ -8,18 +8,17 @@ defineProps<{
 
 <template>
   <div class="w-full mb-2">
-
     <h1 :id="post.title"
       class="w-full text-2xl font-bold md:text-3xl mb-1 flex items-end gap-2">
-      <p class="flex items-center ml--4 flex-row-reverse">
+      <p class="flex-1 flex items-center ml--4 flex-row-reverse">
         <a :href="post.url"
-          class="title w-full flex items-center justify-between hover:underline underline-gray-500/70 underline-dotted underline-offset-6 underline-1">{{
+          class="title w-full hover:underline underline-gray-500/70 underline-dotted underline-offset-6 underline-1">{{
             post.title }}
         </a>
         <a :href="'#' + post.title"
           class="title-anchor hover:underline underline-gray-500/70 underline-dotted underline-offset-6 underline-1">#</a>
       </p>
-      <p>
+      <p class="w-fit">
         <time class="color-gray-500 text-lg hidden sm:block">{{ post.date }}</time>
       </p>
     </h1>

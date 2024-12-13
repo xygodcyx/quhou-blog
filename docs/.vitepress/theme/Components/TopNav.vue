@@ -1,9 +1,7 @@
 <template>
   <nav class="w-full h10 p2 flex items-center">
     <a href="/"
-      class="logo text-xl font-bold overflow-hidden xl:text-xl">
-      屈侯
-    </a>
+      class="text-xl font-bold overflow-hidden">屈侯</a>
     <div class="flex-auto" />
     <div class="menu flex items-center gap-2">
       <LinkText href="/">首页</LinkText>
@@ -24,6 +22,7 @@
         href="https://x.com/force76246">X</TextIcon>
     </div>
   </nav>
+  <hr>
 </template>
 
 <script setup lang="ts">
