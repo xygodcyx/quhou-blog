@@ -1,6 +1,6 @@
 <!-- .vitepress/theme/Layout.vue -->
 <template>
-  <div class="w100vw min-h-screen overflow-x-hidden bg-#f6d866/10">
+  <div class="w100vw min-h-screen overflow-x-hidden">
     <TopNav />
     <div v-if="page.isNotFound">
       Custom 404 page!
