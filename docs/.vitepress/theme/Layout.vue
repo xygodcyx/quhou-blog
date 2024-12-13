@@ -1,6 +1,6 @@
 <!-- .vitepress/theme/Layout.vue -->
 <template>
-  <div class="w100vw min-h-100vh overflow-x-hidden">
+  <div class="w100vw min-h-100vh overflow-x-hidden bg-white">
     <TopNav />
     <NotFound v-if="page.isNotFound" />
     <Home v-else-if="frontmatter.index" />
