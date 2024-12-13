@@ -1,8 +1,7 @@
 <template>
   <div class="w-100vw flex justify-center items-start ">
     <div class="w-100vw flex justify-center items-start position-relative">
-
-      <div class="w-80% flex flex-col items-center xl:w-70%"
+      <div class="w-90% flex flex-col items-center xl:w-70%"
         ref="content">
         <h1 class="text-center mb-4 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">{{ frontmatter.title }}</h1>
         <div class="w-90% flex items-center gap-0.1 lg:w-90%">
@@ -13,18 +12,19 @@
           <span class="ml-1">{{ new Date(frontmatter.date).getFullYear() + '年' + (new
             Date(frontmatter.date).getMonth() +
             1) + '月' + new Date(frontmatter.date).getDate() + '日' }}</span>
+          <button @click="back"
+            class="underline text-3xl underline-gray underline-offset-4 underline-from-font">
+            <= </button>
+              <GoTop />
         </div>
         <section class="excerpt w-full">
-          <p class="text-sm indent-4">AI摘要：</p>
-          <q class="indent-4">{{ aiExcerpt || frontmatter.excerpt || "暂无摘要" }}</q>
+          <p class="text-xl indent-4">AI摘要：</p>
+          <q class="indent-2 text-xl">{{ aiExcerpt || frontmatter.excerpt || "暂无摘要" }}</q>
         </section>
         <hr class="w-full my-2">
-        <Content class="w-full indent-4 text-xl" />
+        <Content class="w-full indent-6 text-2xl" />
       </div>
-      <button @click="back"
-        class="mt-4 underline text-xl underline-blueGray underline-offset-4 underline-from-font">
-        <= </button>
-          <GoTop />
+
     </div>
   </div>
 </template>

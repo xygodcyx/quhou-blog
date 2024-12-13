@@ -4,7 +4,7 @@ import '@unocss/reset/tailwind.css'
 import { h } from 'vue'
 import { type Theme } from 'vitepress'
 import { createMarkdownRenderer } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme-without-fonts'
 import Layout from './Layout.vue'
 import "uno.css";
 

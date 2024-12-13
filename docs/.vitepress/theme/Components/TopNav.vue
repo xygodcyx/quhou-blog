@@ -7,14 +7,14 @@
     <div class="flex-auto" />
     <div class="menu flex items-center gap-2">
       <LinkText href="/">首页</LinkText>
-      <LinkText href="/archives">归档</LinkText>
       <LinkText href="/classifies">分类</LinkText>
+      <LinkText href="/archives">归档</LinkText>
     </div>
     <div class="mr-4" />
     <div class="icons-text gap-1 w-fit hidden sm:flex">
       <TextIcon target="_blank"
         title="屈侯访翠思乡"
-        href="https://space.bilibili.com/1308065752">B站</TextIcon>
+        href="https://space.bilibili.com/1308065752">Bilibili</TextIcon>
       <TextIcon target="_blank"
         title="xygodcyx"
         href="https://github.com/xygodcyx">Github</TextIcon>

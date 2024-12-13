@@ -16,6 +16,16 @@ pre * {
   font-size: 14px;
 }
 
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: #{((7 - $i) * 0.4)}rem;
+    line-height: 1.2;
+    font-weight: bolder;
+    text-indent: 0;
+    color: black;
+  }
+}
+
 pre {
   background-color: #ffe9d065;
   padding: 0.8rem;
@@ -38,37 +48,6 @@ body {
 
 hr {
   margin: 10px 0;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  text-indent: 0;
-}
-h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-indent: 0;
-}
-h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-indent: 0;
-}
-h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  text-indent: 0;
-}
-h5 {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-indent: 0;
-}
-h6 {
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-indent: 0;
 }
 
 ::-webkit-scrollbar {
