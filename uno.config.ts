@@ -17,7 +17,8 @@ export default defineConfig({
     }),
   ],
   rules: [
-    ["text-overflow-ellipsis", { "text-overflow": "ellipsis", "white-space": "nowrap", "overflow": "hidden" }]
+    ["text-overflow-ellipsis", { "text-overflow": "ellipsis", "white-space": "nowrap", "overflow": "hidden" }],
+    ["/^box-overflow-line-\d$/", { "display": "-webkit-box", "-webkit-line-clamp": "$match", "-webkit-box-orient": "vertical", "overflow": "hidden" }],
   ],
   transformers: [
     transformerDirectives(),

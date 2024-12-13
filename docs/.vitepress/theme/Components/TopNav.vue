@@ -11,7 +11,8 @@
       <LinkText href="/archives">归档</LinkText>
     </div>
     <div class="mr-4" />
-    <div class="icons-text gap-1 w-fit hidden sm:flex">
+    <div class="icons-text gap-1 w-fit hidden sm:flex"
+      v-if="false">
       <TextIcon target="_blank"
         title="屈侯访翠思乡"
         href="https://space.bilibili.com/1308065752">Bilibili</TextIcon>
@@ -29,19 +30,4 @@
 
 </script>
 
-<style lang="scss" scoped>
-.logo {
-  opacity: 1;
-  animation: identifier 6s ease-in-out infinite alternate;
-}
-
-@keyframes identifier {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0.6;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

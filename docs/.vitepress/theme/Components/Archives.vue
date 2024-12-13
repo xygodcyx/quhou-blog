@@ -10,13 +10,14 @@ import { data as articles } from '../data/archive.data'
         class="text-center w-full flex flex-col items-center relative h-fit">
         <h1 class="z--999 text-30 opacity-10 absolute left-0 bottom-50% transform-translate-y-40%">{{ article.year }}
         </h1>
-        <ol class="flex-col items-start w-full">
+        <ol class="flex flex-col items-start w-full gap-2">
           <li v-for="post of article.posts"
             class="w-full flex justify-center">
             <a :href="post.url"
-              class="w-90% text-start text-2xl flex justify-between items-center hover:text-gray-500 ">
-              <span class="text-overflow-ellipsis w-90%">{{ post.title }}</span>
-              <span class="text-sm opacity-50 w-fit">{{ new Date(post.dateTime).getMonth() + 1 }}月{{ new Date(post.dateTime).getDate() }}日</span>
+              class="w-90% text-start text-2xl flex justify-between items-start hover:text-gray-500 ">
+              <span class="flex-1 mr-4">{{ post.title }}</span>
+              <span class="text-sm opacity-50 w-fit">{{ new Date(post.dateTime).getMonth() + 1 }}月{{ new
+                Date(post.dateTime).getDate() }}日</span>
             </a>
           </li>
         </ol>

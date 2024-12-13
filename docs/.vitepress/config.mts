@@ -27,6 +27,14 @@ export default defineConfig({
       formatOptions: {
         forceLocale: true
       }
+    },
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: '...',
+        apiKey: '...',
+        indexName: '...'
+      }
     }
   }
 })
