@@ -1,4 +1,4 @@
-@import url("./var.css");
+@import url('./var.css');
 
 @font-face {
   font-family: 'ruimei';
@@ -8,6 +8,7 @@
 @font-face {
   font-family: 'ruimei-dev';
   src: url('../../assets/ruimei.ttf');
+  font-display: swap;
 }
 
 html * {
