@@ -17,7 +17,7 @@ function extractCharactersFromHTML(directory) {
 
   htmlFiles.forEach((file) => {
     const content = fs.readFileSync(file, "utf-8");
-    const matches = content.match(/[一-龥\w\d\s`~!@#$%^&*()_+\。？！，、；：""''（）［］〔〕【】——……《》〈〉·・-=\[\]{};:'",.<>?/\\|]/g);
+    const matches = content.match(/[\p{L}\p{M}\p{N}\p{P}\p{S}\p{Z}\p{C}]/gu);
     if (matches) {
       matches.forEach((char) => charSet.add(char));
     }
