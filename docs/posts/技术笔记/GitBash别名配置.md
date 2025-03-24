@@ -1,10 +1,12 @@
 ---
 title: GitBash别名配置
 date: 2025-03-25
-tags: 技术笔记
+tags: ["技术笔记"]
 author: QuHou
-excerpt:  暂无摘要
+excerpt: 暂无摘要
 ---
+
+
 
 1.打开Git Bash，查看本机根目录下是否存在.bash_profile文件，若不存在，则创建该文件：
 

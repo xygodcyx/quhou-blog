@@ -2,19 +2,18 @@
 
 @font-face {
   font-family: 'ruimei';
-  src: url('../../assets/subset/ruimei.woff2') format('woff2');
+  src: url('../../assets/ruimei.ttf');
 }
 
 @font-face {
   font-family: 'ruimei-dev';
   src: url('../../assets/ruimei.ttf');
-  font-display: swap;
 }
 
 html * {
-  font-family: 'ruimei', 'ruimei-dev', sans-serif;
+  font-family: 'ruimei',  '宋体';
 }
-pre * {
+html pre * {
   font-family: 'Consolas', 'Courier New', monospace;
   font-size: 14px;
 }
