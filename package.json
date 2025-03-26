@@ -24,7 +24,7 @@
     "ttf2woff2": "^6.0.1",
     "vitepress": "^1.5.0"
   },
-  "packageManager":"pnpm@9.14.4",
+  "packageManager": "pnpm@9.14.4",
   "eslintConfig": {
     "extends": "@antfu"
   }

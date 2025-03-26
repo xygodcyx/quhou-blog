@@ -1,16 +1,17 @@
 <template>
-  <a class="text-gray-500 hover:text-gray-600 text-6"
-    :class="{ active: router.route.path.split('.')[0] === (href) }">
+  <a
+    class="text-gray-500 hover:text-gray-600 text-8"
+    :class="{ active: router.route.path.split('.')[0] === href }"
+  >
     <slot />
   </a>
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vitepress';
-import { useAttrs } from 'vue';
-const router = useRouter();
-const href: string = useAttrs().href as string;
-
+import { useRouter } from 'vitepress'
+import { useAttrs } from 'vue'
+const router = useRouter()
+const href: string = useAttrs().href as string
 </script>
 
 <style lang="scss">
