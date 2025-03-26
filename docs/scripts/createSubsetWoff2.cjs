@@ -4,7 +4,6 @@
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-
 // 配置路径
 const DIST_DIR = path.resolve(path.join(__dirname, "..", ".vitepress", "dist")); // HTML 文件目录
 const ORIGINAL_TTF = path.resolve(path.join(__dirname, "..", "assets", "ruimei.ttf")); // 原始 TTF 字体路径
