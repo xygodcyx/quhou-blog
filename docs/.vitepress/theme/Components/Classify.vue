@@ -1,6 +1,15 @@
-<script setup>
+<script setup lang="ts">
 import { data as classiies } from '../data/classify.data'
-console.log(classiies)
+import { formatDate, TPDateInfo } from '../utills'
+function formatter(dateInfo: TPDateInfo) {
+  const { month, day } = dateInfo
+  const nowDate = new Date()
+  const nowDay = nowDate.getDate()
+  if (day === nowDay) {
+    return '今天'
+  }
+  return `${month}.${day}`
+}
 </script>
 
 <template>
@@ -15,9 +24,13 @@ console.log(classiies)
           <li v-for="post of classify.posts">
             <a
               :href="post.url"
-              class="text-start w-full sm:w-90% text-1.5rem block hover:text-blueGray"
-              >{{ post.title }}</a
+              class="text-start w-full sm:w-90% hover:text-blueGray flex justify-between"
             >
+              <span text="1.5rem">{{ post.title }}</span>
+              <span text="1.2rem">{{
+                formatDate(post.date, formatter, true)
+              }}</span>
+            </a>
           </li>
         </ul>
       </li>

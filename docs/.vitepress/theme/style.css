@@ -10,7 +10,7 @@
 }
 .copy::after {
   content: '复制';
-  font-size: 15px;
+  font-size: 1.6rem;
   color: #c55959;
   width: fit-content;
   top: 1.6rem;
@@ -24,7 +24,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: #c55959;
-  padding: 0 5px;
+  padding: 5px;
 }

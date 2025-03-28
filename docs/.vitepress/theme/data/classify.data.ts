@@ -1,5 +1,5 @@
 // archive.data.ts
-import { createContentLoader } from 'vitepress'
+import { createContentLoader, defineLoader } from 'vitepress'
 
 interface Tag {
   name: string
@@ -16,7 +16,8 @@ interface Classify {
   tag: Tag
   posts: Post[]
 }
-
+declare const data: Classify[]
+export { data }
 
 export default createContentLoader('posts/*/*.md', {
   transform(rawData) {
@@ -40,9 +41,7 @@ export default createContentLoader('posts/*/*.md', {
     }
     const classify: Classify[] = []
     for (const tag of allTags) {
-      const posts = allPosts.filter((post) =>
-        post.tags.includes(tag.name)
-      )
+      const posts = allPosts.filter((post) => post.tags.includes(tag.name))
       classify.push({ tag, posts })
     }
     return classify

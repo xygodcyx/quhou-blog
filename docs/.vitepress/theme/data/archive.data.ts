@@ -12,6 +12,9 @@ export interface Archive {
   posts: Post[]
 }
 
+declare const data: Archive[]
+export { data }
+
 export default createContentLoader('posts/*/*.md', {
   transform(rawData) {
     const yearMap = {}
@@ -29,16 +32,20 @@ export default createContentLoader('posts/*/*.md', {
     for (const year of years) {
       result.push({
         year,
-        posts: yearMap[year].sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()).map(post => {
-          const date = new Date(post.frontmatter.date)
-          const dateText = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
-          return {
-            url: post.url,
-            title: post.frontmatter.title,
-            date: dateText,
-            dateTime: date.getTime(),
-          }
-        })
+        posts: yearMap[year]
+          .sort(
+            (a, b) =>
+              new Date(b.frontmatter.date).getTime() -
+              new Date(a.frontmatter.date).getTime()
+          )
+          .map((post) => {
+            const date = new Date(post.frontmatter.date)
+            return {
+              url: post.url,
+              title: post.frontmatter.title,
+              date: date.getTime()
+            }
+          })
       })
     }
     return result

@@ -15,8 +15,8 @@ export default defineConfig({
     },
     server: {
       // https: process.env.NODE_ENV === 'development' ? {
-      //   key: path.resolve(__dirname, "../../", 'localhost.key'),
-      //   cert: path.resolve(__dirname, "../../", 'localhost.crt'),
+      // key: path.resolve(__dirname, "../../", 'localhost.key'),
+      // cert: path.resolve(__dirname, "../../", 'localhost.crt'),
       // } : {}
     }
   },
