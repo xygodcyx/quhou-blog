@@ -3,15 +3,13 @@ import UnoCSS from 'unocss/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "blog",
+  title: 'blog',
   description: "quhou's blog",
-  srcDir: "./",
-  markdown: {
-  },
+  srcDir: './',
+  markdown: {},
+  head: [['link', { rel: 'shortcut icon', href: '/favicon.png' }]],
   vite: {
-    plugins: [
-      UnoCSS()
-    ],
+    plugins: [UnoCSS()],
     define: {
       __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true
     },
